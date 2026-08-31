@@ -23,7 +23,7 @@ int parser(int argc, char **argv, int *largura, int *altura, int *maxIteracoes, 
 int calculoMandelbrot(double cReal, double cImag, int maxIteracoes);
 
 //Conversao do num de iteracoes para uma intensidade entre 0 e 255
-unsigned char intensidade(int iteracoes, int maxIteracoes);
+unsigned char intensidadePixels(int iteracoes, int maxIteracoes);
 
 //Escrita do arquivo .pgm
 int escritaPGM(const char *arquivo, unsigned char *buffer, int largura, int altura);

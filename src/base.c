@@ -83,7 +83,7 @@ int calculoMandelbrot(double cReal, double cImag, int maxIteracoes){
     return maxIteracoes;    
 }
 
-unsigned char intensidade(int iteracoes, int maxIteracoes){
+unsigned char intensidadePixels(int iteracoes, int maxIteracoes){
     return (unsigned char)((iteracoes / (double)maxIteracoes) * 255.0);
 }
 
@@ -95,13 +95,13 @@ int escritaPGM(const char *arquivo, unsigned char *buffer, int largura, int altu
         return -1;
     }
 
-    for(int alt = 0; alt<altura; alt++){
-        for(int larg = 0; larg<largura; larg++){
-            if(larg>0){
+    for(int py = 0; py<altura; py++){
+        for(int px = 0; px<largura; px++){
+            if(px>0){
                 fprintf(fp, " ");
             }
 
-            fprintf(fp, "%d", buffer[alt * largura + larg]);
+            fprintf(fp, "%d", buffer[py * largura + px]);
         }
 
         fprintf(fp, "\n");
