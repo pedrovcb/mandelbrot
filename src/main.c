@@ -10,6 +10,7 @@
 void calcSerial(unsigned char *buffer, int largura, int altura, int maxIteracoes);
 void calcOpenMP(unsigned char *buffer, int largura, int altura, int maxIteracoes, int numThreads);
 void calcPthreads1(unsigned char *buffer, int largura, int altura, int maxIteracoes, int numThreads);
+void calcPthreads2(unsigned char *buffer, int largura, int altura, int maxIteracoes, int numThreads);
 
 int main(int argc, char **argv){
     int largura, altura, maxIteracoes, numThreads;
@@ -54,6 +55,16 @@ int main(int argc, char **argv){
     snprintf(arquivo, sizeof(arquivo), "mandelbrot_%s_pthreads1.pgm", LOGIN);
     escritaPGM(arquivo, buffer, largura, altura);
 
+    //Mandelbrot - Pthreads2
+    clock_gettime(CLOCK_MONOTONIC, &inicio);
+    calcPthreads2(buffer, largura, altura, maxIteracoes, numThreads);
+    clock_gettime(CLOCK_MONOTONIC, &fim);
+    double tempoPthreads2 = (fim.tv_sec - inicio.tv_sec) + (fim.tv_nsec - inicio.tv_nsec) / 1e9;
+
+    snprintf(arquivo, sizeof(arquivo), "mandelbrot_%s_pthreads2.pgm", LOGIN);
+    escritaPGM(arquivo, buffer, largura, altura);
+
+
     // Registro times.txt
     FILE *fp = fopen("times.txt", "w");
 
@@ -66,6 +77,7 @@ int main(int argc, char **argv){
     fprintf(fp, "Serial: %.6f segundos\n", tempoSerial);
     fprintf(fp, "OpenMP: %.6f segundos\n", tempoOpenMP);
     fprintf(fp, "Pthreads1: %.6f segundos\n", tempoPthreads1);
+    fprintf(fp, "Pthreads2: %.6f segundos\n", tempoPthreads2);
 
     fclose(fp);
 
