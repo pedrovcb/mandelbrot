@@ -1,0 +1,552 @@
+Script iniciado em 2026-08-30 21:17:38-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="167" LINES="38"]
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m? [1m❯[0m date
+[?2004l
+dom 30 ago 2026 21:17:53 -03
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m? [1m❯[0m whoami
+[?2004l
+pedrovcb
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m? [1m❯[0m pwd
+[?2004l
+/home/pedrovcb/Documentos/mandelbrot
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m? [1m❯[0m make
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp   -c -o src/main.o src/main.c
+make: *** Sem regra para processar o alvo 'src/common.o', necessário por 'mandelbrot' .  Pare.
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m ^C[?2004l
+[?2004h[?2004l
+
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m make[1Ppwdmake
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/base.o src/base.c
+make: *** Sem regra para processar o alvo 'src/mandelbrot_serial.o', necessário por 'mandelbrot' .  Pare.
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m make
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotSerial.o src/mandelbrotSerial.c
+make: *** Sem regra para processar o alvo 'src/mandelbrotOpenmp.o', necessário por 'mandelbrot' .  Pare.
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m make
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp -o mandelbrot src/main.o src/base.o src/mandelbrotSerial.o -pthread -fopenmp
+/usr/bin/ld: src/main.o: na função "main":
+main.c:(.text.startup+0xcf): referência não definida para "calcSerial"
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:17: mandelbrot] Error 1
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m make
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotSerial.o src/mandelbrotSerial.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -o mandelbrot src/main.o src/base.o src/mandelbrotSerial.o -pthread -fopenmp
+/usr/bin/ld: src/mandelbrotSerial.o: na função "calcSerial":
+mandelbrotSerial.c:(.text+0xf1): referência não definida para "intensidadePixels"
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:17: mandelbrot] Error 1
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m [C[Cke clean
+[?2004l
+rm -f src/main.o src/base.o src/mandelbrotSerial.o mandelbrot
+rm -f mandelbrot_pvcb_*.pgm times.txt
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/main.o src/main.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/base.o src/base.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotSerial.o src/mandelbrotSerial.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -o mandelbrot src/main.o src/base.o src/mandelbrotSerial.o -pthread -fopenmp
+/usr/bin/ld: src/mandelbrotSerial.o: na função "calcSerial":
+mandelbrotSerial.c:(.text+0xf1): referência não definida para "intensidadePixels"
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:17: mandelbrot] Error 1
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m [C[Cke clean
+[?2004l
+rm -f src/main.o src/base.o src/mandelbrotSerial.o mandelbrot
+rm -f mandelbrot_pvcb_*.pgm times.txt
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/main.o src/main.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/base.o src/base.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotSerial.o src/mandelbrotSerial.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -o mandelbrot src/main.o src/base.o src/mandelbrotSerial.o -pthread -fopenmp
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m .
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C/
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cmandelbrot 4 4 50 1
+[?2004l
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m c
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Ct mandelbrot_pvcb_serial.pgm
+[?2004l
+5 10 10 10
+5 15 30 25
+255 255 255 255
+5 15 30 25
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke clean
+[?2004l
+rm -f src/main.o src/base.o src/mandelbrotSerial.o mandelbrot
+rm -f mandelbrot_pvcb_*.pgm times.txt
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/main.o src/main.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/base.o src/base.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotSerial.o src/mandelbrotSerial.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotOpenMP.o src/mandelbrotOpenMP.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -o mandelbrot src/main.o src/base.o src/mandelbrotSerial.o src/mandelbrotOpenMP.o -pthread -fopenmp
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m /
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m .
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C/
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cmandelbrot 6 6 30 3
+[?2004l
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m c
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Ct mandelbrot_pvcb_openmp.pgm
+[?2004l
+8 8 17 17 17 17
+8 17 25 34 255 17
+8 25 42 255 255 42
+255 255 255 255 255 42
+8 25 42 255 255 42
+8 17 25 34 255 17
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m c
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Ct times.txt
+[?2004l
+Serial: 0.000002 segundos
+OpenMP: 0.000078 segundos
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m o
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke clean
+[?2004l
+rm -f src/main.o src/base.o src/mandelbrotSerial.o src/mandelbrotOpenMP.o mandelbrot
+rm -f mandelbrot_pvcb_*.pgm times.txt
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/base.o src/base.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/main.o src/main.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotOpenMP.o src/mandelbrotOpenMP.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotSerial.o src/mandelbrotSerial.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -o mandelbrot src/base.o src/main.o src/mandelbrotOpenMP.o src/mandelbrotSerial.o
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m make cleancat times.txtmandelbrot_pvcb_openmp.pgm
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9P./mandelbrot 6 6 30 3
+[?2004l
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m ./mandelbrot 6 6 30 3make[K clean[K./mandelbrot 6 6 30 3[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m ./mandelbrot 6 6 30 3make[K cleancat times.txtmandelbrot_pvcb_openmp.pgm
+[?2004l
+8 8 17 17 17 17
+8 17 25 34 255 17
+8 25 42 255 255 42
+255 255 255 255 255 42
+8 25 42 255 255 42
+8 17 25 34 255 17
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m cat mandelbrot_pvcb_openmp.pgm
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9P./mandelbrot 6 6 30 3make[K cleancat times.txt
+[?2004l
+Serial: 0.000001 segundos
+OpenMP: 0.000577 segundos
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m cat times.txtmandelbrot_pvcb_openmp.pgm
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9P./mandelbrot 6 6 30 3make[K./mandelbrot 6 6 30 3cat mandelbrot_pvcb_openmp.pgm[17Ptimes.txt[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m cat times.txtmandelbrot_pvcb_openmp.pgm
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9P./mandelbrot 6 6 30 3make[K clean
+[?2004l
+rm -f src/base.o src/main.o src/mandelbrotOpenMP.o src/mandelbrotSerial.o mandelbrot mandelbrot_pvcb_*.pgm times.txt
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+Script concluído em 2026-08-31 02:42:00-03:00 [COMMAND_EXIT_CODE="0"]
+Script iniciado em 2026-08-31 12:17:35-03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="167" LINES="38"]
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m d
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cte
+[?2004l
+seg 31 ago 2026 12:17:55 -03
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m w
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ch
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Coami
+[?2004l
+pedrovcb
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m p
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Cw
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cd
+[?2004l
+/home/pedrovcb/Documentos/mandelbrot
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/base.o src/base.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/main.o src/main.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotOpenMP.o src/mandelbrotOpenMP.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotPthreads1.o src/mandelbrotPthreads1.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotSerial.o src/mandelbrotSerial.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -o mandelbrot src/base.o src/main.o src/mandelbrotOpenMP.o src/mandelbrotPthreads1.o src/mandelbrotSerial.o
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C/
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cmandelbrot 10 6 40 4
+[?2004l
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m c
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Ct mandelbrot_pvcb_pthreads1.pgm
+[?2004l
+6 6 6 12 12 12 12 12 12 12
+6 12 19 19 19 25 44 25 19 12
+6 19 19 31 38 255 255 255 44 19
+255 255 255 255 255 255 255 255 44 19
+6 19 19 31 38 255 255 255 44 19
+6 12 19 19 19 25 44 25 19 12
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke clean
+[?2004l
+rm -f src/base.o src/main.o src/mandelbrotOpenMP.o src/mandelbrotPthreads1.o src/mandelbrotSerial.o mandelbrot mandelbrot_pvcb_*.pgm times.txt
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m make cleancat mandelbrot_pvcb_pthreads1.pgm
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11P./mandelbrot 10 6 40 4make[K
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/base.o src/base.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/main.o src/main.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotOpenMP.o src/mandelbrotOpenMP.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotPthreads1.o src/mandelbrotPthreads1.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotSerial.o src/mandelbrotSerial.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -o mandelbrot src/base.o src/main.o src/mandelbrotOpenMP.o src/mandelbrotPthreads1.o src/mandelbrotSerial.o
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m make clean[K cleancat mandelbrot_pvcb_pthreads1.pgm
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11P./mandelbrot 10 6 40 4
+[?2004l
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m ./mandelbrot 10 6 40 4[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[C[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m c
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Ct times.txt
+[?2004l
+Serial: 0.000007 segundos
+OpenMP: 0.000203 segundos
+Pthreads1: 0.000287 segundos
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke clean
+[?2004l
+rm -f src/base.o src/main.o src/mandelbrotOpenMP.o src/mandelbrotPthreads1.o src/mandelbrotSerial.o mandelbrot mandelbrot_pvcb_*.pgm times.txt
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m ^C[?2004l
+[?2004h[?2004l
+
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m? [1m✗[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m? [1m✗[0m 
+Script concluído em 2026-08-31 12:38:34-03:00 [COMMAND_EXIT_CODE="0"]
+Script iniciado em 2026-09-01 20:04:08-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="167" LINES="38"]
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m .
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C/
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cmandelbrot 10 6 40 4
+[?2004l
+bash: ./mandelbrot: Arquivo ou diretório inexistente
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m✗[0m [C[Cke
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/base.o src/base.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/main.o src/main.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotOpenMP.o src/mandelbrotOpenMP.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotPthreads1.o src/mandelbrotPthreads1.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotPthreads2.o src/mandelbrotPthreads2.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotSerial.o src/mandelbrotSerial.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -o mandelbrot src/base.o src/main.o src/mandelbrotOpenMP.o src/mandelbrotPthreads1.o src/mandelbrotPthreads2.o src/mandelbrotSerial.o
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m make./mandelbrot 10 6 40 4
+[?2004l
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m c
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Ct o[Kmandelbrot_pvcb_´threa[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[C[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m l
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Cs
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[C
+[?2004l
+[4mPermissions[0m [4mSize[0m [4mUser[0m     [4mDate Modified[0m [4mName[0m
+[1;34md[33mr[31mw[32mx[0m[33mr[1;90m-[0m[32mx[33mr[1;90m-[0m[32mx[0m     [1;90m-[0m [1;33mpedrovcb[0m [34m 1 set 20:04[0m  [34m󰣞 [1msrc[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [1;32m80k[0m [1;33mpedrovcb[0m [34m 1 set 20:05[0m   evidencias.log
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [32m331[0m [1;33mpedrovcb[0m [34m31 ago 01:31[0m  [33m [1;4mMakefile[0m
+.[1;33mr[31mw[4;32mx[0m[33mr[1;90m-[0m[32mx[33mr[1;90m-[0m[32mx[0m   [1;32m22k[0m [1;33mpedrovcb[0m [34m 1 set 20:04[0m  [32m󰡯 [1mmandelbrot[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [32m187[0m [1;33mpedrovcb[0m [34m 1 set 20:04[0m  [35m mandelbrot_pvcb_openmp.pgm[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [32m187[0m [1;33mpedrovcb[0m [34m 1 set 20:04[0m  [35m mandelbrot_pvcb_pthreads1.pgm[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [32m187[0m [1;33mpedrovcb[0m [34m 1 set 20:04[0m  [35m mandelbrot_pvcb_serial.pgm[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [1;32m22k[0m [1;33mpedrovcb[0m [34m30 ago 20:24[0m   planejamento.md
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [32m106[0m [1;33mpedrovcb[0m [34m30 ago 20:12[0m  [33m󰂺 [1;4mREADME.md[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [32m110[0m [1;33mpedrovcb[0m [34m 1 set 20:04[0m   times.txt
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cndel[K[K[K[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[C[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m l
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Cs
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[C ti[K[Ktimes[K[K[K[K[K[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[C[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m c
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cts[K times.txt
+[?2004l
+Serial: 0.000011 segundos
+OpenMP: 0.000469 segundos
+Pthreads1: 0.000437 segundos
+Pthreads2: 0.000186 segundos
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke clean
+[?2004l
+rm -f src/base.o src/main.o src/mandelbrotOpenMP.o src/mandelbrotPthreads1.o src/mandelbrotPthreads2.o src/mandelbrotSerial.o mandelbrot mandelbrot_pvcb_*.pgm times.txt
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+Script concluído em 2026-09-01 20:06:05-03:00 [COMMAND_EXIT_CODE="0"]
+Script iniciado em 2026-09-02 07:41:40-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="167" LINES="38"]
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/base.o src/base.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/main.o src/main.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotOpenMP.o src/mandelbrotOpenMP.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotPthreads1.o src/mandelbrotPthreads1.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotPthreads2.o src/mandelbrotPthreads2.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotSerial.o src/mandelbrotSerial.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -o mandelbrot src/base.o src/main.o src/mandelbrotOpenMP.o src/mandelbrotPthreads1.o src/mandelbrotPthreads2.o src/mandelbrotSerial.o
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m .
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C/
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cmandelbrot 10 6 40 4
+[?2004l
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m l
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Cs
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[C
+[?2004l
+[4mPermissions[0m [4mSize[0m [4mUser[0m     [4mDate Modified[0m [4mName[0m
+[1;34md[33mr[31mw[32mx[0m[33mr[1;90m-[0m[32mx[33mr[1;90m-[0m[32mx[0m     [1;90m-[0m [1;33mpedrovcb[0m [34m 2 set 07:41[0m  [34m󰣞 [1msrc[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [1;32m87k[0m [1;33mpedrovcb[0m [34m 2 set 07:42[0m   evidencias.log
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [32m331[0m [1;33mpedrovcb[0m [34m31 ago 01:31[0m  [33m [1;4mMakefile[0m
+.[1;33mr[31mw[4;32mx[0m[33mr[1;90m-[0m[32mx[33mr[1;90m-[0m[32mx[0m   [1;32m22k[0m [1;33mpedrovcb[0m [34m 2 set 07:41[0m  [32m󰡯 [1mmandelbrot[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [32m187[0m [1;33mpedrovcb[0m [34m 2 set 07:42[0m  [35m mandelbrot_pvcb_openmp.pgm[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [32m187[0m [1;33mpedrovcb[0m [34m 2 set 07:42[0m  [35m mandelbrot_pvcb_pthreads1.pgm[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [32m187[0m [1;33mpedrovcb[0m [34m 2 set 07:42[0m  [35m mandelbrot_pvcb_pthreads2.pgm[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [32m187[0m [1;33mpedrovcb[0m [34m 2 set 07:42[0m  [35m mandelbrot_pvcb_serial.pgm[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [1;32m22k[0m [1;33mpedrovcb[0m [34m30 ago 20:24[0m   planejamento.md
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [32m106[0m [1;33mpedrovcb[0m [34m30 ago 20:12[0m  [33m󰂺 [1;4mREADME.md[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m   [32m110[0m [1;33mpedrovcb[0m [34m 2 set 07:42[0m   times.txt
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m c
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Ct mandelbrot_pvcb_t[Kpthreads1.pgm
+[?2004l
+6 6 6 12 12 12 12 12 12 12
+6 12 19 19 19 25 44 25 19 12
+6 19 19 31 38 255 255 255 44 19
+255 255 255 255 255 255 255 255 44 19
+6 19 19 31 38 255 255 255 44 19
+6 12 19 19 19 25 44 25 19 12
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m cat mandelbrot_pvcb_pthreads1.pgm[1P[1@2
+[?2004l
+6 6 6 12 12 12 12 12 12 12
+6 12 19 19 19 25 44 25 19 12
+6 19 19 31 38 255 255 255 44 19
+255 255 255 255 255 255 255 255 44 19
+6 19 19 31 38 255 255 255 44 19
+6 12 19 19 19 25 44 25 19 12
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m c
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Ct times.txt
+[?2004l
+Serial: 0.000004 segundos
+OpenMP: 0.000202 segundos
+Pthreads1: 0.000081 segundos
+Pthreads2: 0.000046 segundos
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke clean
+[?2004l
+rm -f src/base.o src/main.o src/mandelbrotOpenMP.o src/mandelbrotPthreads1.o src/mandelbrotPthreads2.o src/mandelbrotSerial.o mandelbrot mandelbrot_pvcb_*.pgm times.txt
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke
+[?2004l
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/base.o src/base.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/main.o src/main.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotOpenMP.o src/mandelbrotOpenMP.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotPthreads1.o src/mandelbrotPthreads1.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotPthreads2.o src/mandelbrotPthreads2.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -c -o src/mandelbrotSerial.o src/mandelbrotSerial.c
+gcc -Wall -Wextra -O2 -pthread -fopenmp -o mandelbrot src/base.o src/main.o src/mandelbrotOpenMP.o src/mandelbrotPthreads1.o src/mandelbrotPthreads2.o src/mandelbrotSerial.o
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m make cleancat times.txtmandelbrot_pvcb_pthreads2.pgm1[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[C./mandelbrot 10 6 40 4
+[?2004l
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m c
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Ct times.txtmandelbrot_pvcb_pthreads2.pgm
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l
+6 6 6 12 12 12 12 12 12 12
+6 12 19 19 19 25 44 25 19 12
+6 19 19 31 38 255 255 255 44 19
+255 255 255 255 255 255 255 255 44 19
+6 19 19 31 38 255 255 255 44 19
+6 12 19 19 19 25 44 25 19 12
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m c
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Ct times.tc[Kxt
+[?2004l
+Serial: 0.000002s
+OpenMP: 0.000126s
+Pthreads1: 0.000070s
+Pthreads2: 0.000045s
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m m
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [Ca
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m [C[Cke clena[K[Kan
+[?2004l
+rm -f src/base.o src/main.o src/mandelbrotOpenMP.o src/mandelbrotPthreads1.o src/mandelbrotPthreads2.o src/mandelbrotSerial.o mandelbrot mandelbrot_pvcb_*.pgm times.txt
+]0;pedrovcb@vcbpe:~/Documentos/mandelbrot[?2004h
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+[1;36mmandelbrot[0m [3;36mmain[0m [36m ? [1m❯[0m 
+Script concluído em 2026-09-02 07:52:15-03:00 [COMMAND_EXIT_CODE="0"]
