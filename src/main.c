@@ -74,10 +74,10 @@ int main(int argc, char **argv){
         return 1;
     }
 
-    fprintf(fp, "Serial: %.6f segundos\n", tempoSerial);
-    fprintf(fp, "OpenMP: %.6f segundos\n", tempoOpenMP);
-    fprintf(fp, "Pthreads1: %.6f segundos\n", tempoPthreads1);
-    fprintf(fp, "Pthreads2: %.6f segundos\n", tempoPthreads2);
+    fprintf(fp, "Serial: %.6fs\n", tempoSerial);
+    fprintf(fp, "OpenMP: %.6fs\n", tempoOpenMP);
+    fprintf(fp, "Pthreads1: %.6fs\n", tempoPthreads1);
+    fprintf(fp, "Pthreads2: %.6fs\n", tempoPthreads2);
 
     fclose(fp);
 
